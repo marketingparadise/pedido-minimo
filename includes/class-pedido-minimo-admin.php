@@ -24,8 +24,8 @@ class Mkp_Pedido_Minimo_Admin {
     public function menu_pedido_minimo() {
         add_submenu_page(
             'woocommerce',
-            __( 'Pedido mínimo', 'pedidominimo' ),
-            __( 'Establecer Pedido mínimo', 'pedidominimo' ),
+            __( 'Pedido mínimo', 'pedido-minimo' ),
+            __( 'Establecer Pedido mínimo', 'pedido-minimo' ),
             'manage_woocommerce',
             'mkp-opciones-pedidominimo',
             array ($this, 'opciones_pedidominimo_callback'),
@@ -36,7 +36,7 @@ class Mkp_Pedido_Minimo_Admin {
     public function opciones_pedidominimo_callback() {
         ?>
 		    <div class="wrap">
-			    <h1><?php echo get_admin_page_title() ?></h1>
+                <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 			    <form method="post" action="options.php">
 				    <?php
                     settings_errors(); // Errores. No ponemos 'mkp_settings_error' para que salgan todos los errores y no solo los que nosostros configuremos
@@ -90,7 +90,7 @@ class Mkp_Pedido_Minimo_Admin {
             add_settings_error(
 			'mkp_settings_error',
 			'no-float', // parte del ID del mensaje de error id="setting-error-no-float"
-			__('La cantidad no es válida', 'pedidominimo'), // Mensaje de error
+			__('La cantidad no es válida', 'pedido-minimo'), // Mensaje de error
 			'error' // tipo de error
 		    );
             $input = get_option('mkp_precio_minimo', 0); // Si hay error, se queda el valor anterior

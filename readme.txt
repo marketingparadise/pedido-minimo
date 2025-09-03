@@ -1,76 +1,75 @@
-=== Pedido Mínimo para WooCommerce ===
+=== Pedido mínimo ===
 Contributors: marketingparadise
-Tags: woocommerce, minimum order, cart, checkout, pedido minimo, e-commerce
+Tags: woocommerce, minimum order, cart, checkout, e-commerce
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Establece un importe de pedido mínimo en tu tienda WooCommerce para poder finalizar la compra. Simple, ligero y eficaz.
+Set a minimum order amount in your WooCommerce store to be able to check out. Simple, lightweight, and effective.
 
 == Description ==
 
-¿Quieres asegurarte de que tus clientes alcanzan un importe mínimo antes de completar un pedido? **Pedido Mínimo para WooCommerce** es la herramienta ideal para ti.
+Do you want to ensure your customers reach a minimum amount before completing an order? **Pedido mínimo** is the ideal tool for you.
 
-Este plugin permite establecer un valor mínimo que el subtotal del carrito debe alcanzar para que el cliente pueda proceder al pago. Si no se cumple este requisito, se mostrará una notificación clara en el carrito y se impedirá completar el proceso de compra en el checkout.
+This plugin allows you to set a minimum value that the cart subtotal must reach for the customer to proceed to checkout. If this requirement is not met, a clear notice will be displayed on the cart page, and the checkout process will be prevented.
 
-**Principales características:**
+**Main Features:**
 
-* **Configuración sencilla:** Añade una única opción en las opciones de WooCommerce para definir el importe mínimo.
-* **Notificaciones claras:** Mensajes en el carrito y checkout para informar al usuario cuando no alcanza el mínimo.
-* **Compatibilidad total:** Integración nativa con WooCommerce y compatible con la mayoría de los temas.
-* **Rendimiento óptimo:** Código limpio, ligero y alineado con las mejores prácticas de desarrollo en WordPress.
+* **Simple Configuration:** Adds a single option in the WooCommerce settings to define the minimum amount.
+* **Clear Notices:** Messages on the cart and checkout pages to inform the user when they have not reached the minimum.
+* **Full Compatibility:** Native integration with WooCommerce and compatible with most themes.
+* **Optimal Performance:** Clean, lightweight code that aligns with WordPress development best practices.
 
 == Installation ==
 
-**Instalación Automática (Recomendada):**
+**Automatic Installation (Recommended):**
 
-1.  Desde el panel de administración de tu WordPress, ve a `Plugins > Añadir plugin`.
-2.  Busca "Pedido Mínimo para WooCommerce".
-3.  Haz clic en "Instalar ahora" y luego en "Activar".
-4.  Ve a `WooCommerce > Establecer Pedido mínimo` para configurar el importe mínimo en la sección correspondiente.
+1.  From your WordPress dashboard, navigate to `Plugins > Add New`.
+2.  Search for "Pedido mínimo".
+3.  Click "Install Now" and then "Activate".
+4.  Go to `WooCommerce > Minimum Order` to set the minimum amount in the corresponding section.
 
-**Instalación Manual:**
+**Manual Installation:**
 
-1.  Descarga el archivo `.zip` del plugin desde el repositorio de WordPress.org.
-2.  Descomprime el archivo. Subirás la carpeta `pedido-minimo` al directorio `/wp-content/plugins/` de tu instalación de WordPress.
-3.  Activa el plugin desde el menú `Plugins` en tu panel de administración.
-4.  Configura el importe en `WooCommerce > Establecer Pedido mínimo`.
+1.  Download the plugin's `.zip` file from the WordPress.org repository.
+2.  Unzip the file. You will upload the `pedido-minimo` folder to the `/wp-content/plugins/` directory of your WordPress installation.
+3.  Activate the plugin from the `Plugins` menu in your dashboard.
+4.  Configure the amount in `WooCommerce > Minimum Order`.
 
 == Frequently Asked Questions ==
 
-= ¿El importe mínimo tiene en cuenta los gastos de envío? =
+= Does the minimum amount include shipping costs? =
 
-No, el plugin valida el importe contra el **subtotal del carrito**, antes de aplicar cupones de descuento o sumar los gastos de envío.
+No, the plugin validates the amount against the **cart subtotal**, before applying discount coupons or adding shipping costs.
 
-= ¿Puedo personalizar el mensaje que se muestra al usuario? =
+= Can I customize the message shown to the user? =
 
-Actualmente el plugin muestra un mensaje predeterminado en el carrito. En futuras versiones planeamos ofrecer más opciones de personalización.
+Currently, the plugin displays a default message on the cart. We plan to offer more customization options in future versions.
 
-= ¿Es compatible con mi tema? =
+= Is it compatible with my theme? =
 
-El plugin utiliza los hooks estándar de WooCommerce para mostrar las notificaciones, por lo que debería ser compatible con cualquier tema que siga los estándares de WooCommerce.
+The plugin uses standard WooCommerce hooks to display notices, so it should be compatible with any theme that follows WooCommerce standards.
 
-= ¿Afecta al rendimiento de mi web? =
+= Does it affect my site's performance? =
 
-No. El plugin es extremadamente ligero y el código solo se ejecuta en las páginas de carrito y finalización de compra, por lo que el impacto en el rendimiento es prácticamente nulo.
+No. The plugin is extremely lightweight, and its code only runs on the cart and checkout pages, so the impact on performance is negligible.
 
 == Screenshots ==
 
-1.  Página de ajustes donde se configura el importe mínimo.
-2.  Notificación en la página del carrito cuando no se alcanza el mínimo.
-3.  Notificación en la página de finalización de compra si no se alcanza el mínimo.
+1.  The settings page where the minimum amount is configured.
+2.  Notice on the cart page when the minimum is not met.
+3.  Notice on the checkout page if the minimum is not met.
 
 == Changelog ==
 
+= 1.0.1 - 2025-09-03 =
+* Fix: Corrected internationalization strings.
+* Fix: Corrected escaping for some variables.
+
 = 1.0.0 - 2025-09-01 =
-* Lanzamiento inicial del plugin.
-* Funcionalidad básica para establecer un importe mínimo en el carrito.
-* Notificación visible en el carrito cuando no se alcanza el importe mínimo.
-
-== Upgrade Notice ==
-
-= 1.0.0 =
-Versión inicial. ¡Gracias por instalar Pedido Mínimo para WooCommerce!
+* Initial release of the plugin.
+* Basic functionality to set a minimum amount in the cart.
+* Visible notice on the cart page when the minimum amount is not reached.
