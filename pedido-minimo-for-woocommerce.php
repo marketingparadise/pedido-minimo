@@ -1,12 +1,12 @@
 <?php
 /*
- * Plugin Name: Pedido mínimo
+ * Plugin Name: Pedido mínimo for WooCommerce
  * Description: Establece un pedido mínimo en tu tienda de woocommerce
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Marketing Paradise
  * Author URI: https://mkparadise.com/
  * License: GPLv2 or later
- * Text Domain: pedido-minimo
+ * Text Domain: pedido-minimo-for-woocommerce
  * Domain Path: /languages
 
  * @link      https://mkparadise.com/
@@ -25,8 +25,8 @@ function mkp_activar_plugin_pedido_minimo() {
     if ( ! class_exists( 'WooCommerce' ) ) {
         deactivate_plugins( plugin_basename( __FILE__ ) );
         wp_die(
-            esc_html__( 'Lo sentimos, pero el plugin "Pedido Mínimo" requiere que WooCommerce esté instalado y activo. Por favor, active WooCommerce y vuelva a intentarlo.', 'pedido-minimo' ),
-            esc_html__( 'Error de activación', 'pedido-minimo' ),
+            esc_html__( 'Lo sentimos, pero el plugin "Pedido Mínimo" requiere que WooCommerce esté instalado y activo. Por favor, active WooCommerce y vuelva a intentarlo.', 'pedido-minimo-for-woocommerce' ),
+            esc_html__( 'Error de activación', 'pedido-minimo-for-woocommerce' ),
             array( 'back_link' => true )
         );
     }
@@ -66,8 +66,8 @@ function mkp_aviso_falta_woocommerce() {
     ?>
     <div class="notice notice-error is-dismissible">
         <p>
-            <strong><?php esc_html_e( 'Pedido Mínimo para WooCommerce:', 'pedido-minimo' ); ?></strong>
-            <?php esc_html_e( 'Este plugin requiere que WooCommerce esté instalado y activo para funcionar.', 'pedido-minimo' ); ?>
+            <strong><?php esc_html_e( 'Pedido Mínimo para WooCommerce:', 'pedido-minimo-for-woocommerce' ); ?></strong>
+            <?php esc_html_e( 'Este plugin requiere que WooCommerce esté instalado y activo para funcionar.', 'pedido-minimo-for-woocommerce' ); ?>
         </p>
     </div>
     <?php

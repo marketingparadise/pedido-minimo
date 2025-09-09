@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Pedido mínimo\n"
+"Project-Id-Version: Pedido mínimo for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-03 15:19+0000\n"
+"POT-Creation-Date: 2025-09-09 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.0; wp-6.8.2; php-7.4.19\n"
-"X-Domain: pedido-minimo"
+"X-Domain: pedido-minimo-for-woocommerce"
 
 #. 1: valor del precio mínimo que debe alcanzar el subtotal del carrito, 2: el subtotal actual del carrito.
 #: includes/class-pedido-minimo-public.php:30
@@ -24,7 +24,7 @@ msgid ""
 "compra. Ahora mismo el total de tu carrito es %2$s."
 msgstr ""
 
-#: pedido-minimo.php:30
+#: pedido-minimo-for-woocommerce.php:29
 msgid "Error de activación"
 msgstr ""
 
@@ -36,12 +36,11 @@ msgstr ""
 msgid "Establecer Pedido mínimo"
 msgstr ""
 
-#: pedido-minimo.php:71
+#: pedido-minimo-for-woocommerce.php:70
 msgid ""
 "Este plugin requiere que WooCommerce esté instalado y activo para funcionar."
 msgstr ""
 
-#. URI of the plugin
 #. Author URI of the plugin
 msgid "https://mkparadise.com/"
 msgstr ""
@@ -51,7 +50,7 @@ msgstr ""
 msgid "La cantidad no es válida"
 msgstr ""
 
-#: pedido-minimo.php:29
+#: pedido-minimo-for-woocommerce.php:28
 msgid ""
 "Lo sentimos, pero el plugin \"Pedido Mínimo\" requiere que WooCommerce esté "
 "instalado y activo. Por favor, active WooCommerce y vuelva a intentarlo."
@@ -66,9 +65,9 @@ msgid "Pedido mínimo"
 msgstr ""
 
 #. Name of the plugin
-msgid "Pedido mínimo para Woocommerce"
+msgid "Pedido mínimo for WooCommerce"
 msgstr ""
 
-#: pedido-minimo.php:70
+#: pedido-minimo-for-woocommerce.php:69
 msgid "Pedido Mínimo para WooCommerce:"
 msgstr ""

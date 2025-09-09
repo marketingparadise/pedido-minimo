@@ -27,7 +27,7 @@ class Mkp_Pedido_Minimo_Public {
         }
         if ( WC()->cart->subtotal < $minimum ) {
             /* translators: 1: valor del precio mínimo que debe alcanzar el subtotal del carrito, 2: el subtotal actual del carrito. */
-            $mensaje = sprintf( __('Debes realizar un <strong>pedido mínimo de %1$s</strong> para finalizar su compra. Ahora mismo el total de tu carrito es %2$s.', 'pedido-minimo') ,
+            $mensaje = sprintf( __('Debes realizar un <strong>pedido mínimo de %1$s</strong> para finalizar su compra. Ahora mismo el total de tu carrito es %2$s.', 'pedido-minimo-for-woocommerce') ,
             wc_price( $minimum ),
             wc_price( WC()->cart->subtotal )
             );
