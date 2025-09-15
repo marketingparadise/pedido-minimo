@@ -2,7 +2,8 @@
 /*
  * Plugin Name: Pedido mínimo for WooCommerce
  * Description: Establece un pedido mínimo en tu tienda de woocommerce
- * Version: 1.0.2
+ * Version: 1.0.3
+ * Requires Plugins: woocommerce
  * Author: Marketing Paradise
  * Author URI: https://mkparadise.com/
  * License: GPLv2 or later
@@ -21,7 +22,7 @@ if (!defined('ABSPATH')) {
 /**
  * Al activar el plugin, comprobamos si woocommerce está activo
  */
-function mkp_activar_plugin_pedido_minimo() {
+function pedidominimo_activar_plugin_pedido_minimo() {
     if ( ! class_exists( 'WooCommerce' ) ) {
         deactivate_plugins( plugin_basename( __FILE__ ) );
         wp_die(
@@ -31,14 +32,14 @@ function mkp_activar_plugin_pedido_minimo() {
         );
     }
 }
-register_activation_hook( __FILE__, 'mkp_activar_plugin_pedido_minimo' );
+register_activation_hook( __FILE__, 'pedidominimo_activar_plugin_pedido_minimo' );
 
-final class Mkp_Pedido_Minimo_Principal {
+final class PedidoMinimo_Principal {
 
     public function __construct() {
         $this->cargar_dependencias();
-        new Mkp_Pedido_Minimo_Admin();
-        new Mkp_Pedido_Minimo_Public();
+        new PedidoMinimo_Admin();
+        new PedidoMinimo_Public();
     }
 
     private function cargar_dependencias() {
@@ -50,19 +51,19 @@ final class Mkp_Pedido_Minimo_Principal {
 /**
  * Lanza mensaje si desactivamos woocommerce
  */
-function mkp_inicializar_plugin_pedido_minimo() {
+function pedidominimo_inicializar_plugin_pedido_minimo() {
     
     if ( ! class_exists( 'WooCommerce' ) ) {
-        add_action( 'admin_notices', 'mkp_aviso_falta_woocommerce' );
+        add_action( 'admin_notices', 'pedidominimo_aviso_falta_woocommerce' );
         return;
     }
 
-    new Mkp_Pedido_Minimo_Principal();
+    new PedidoMinimo_Principal();
 }
-add_action( 'plugins_loaded', 'mkp_inicializar_plugin_pedido_minimo' );
+add_action( 'plugins_loaded', 'pedidominimo_inicializar_plugin_pedido_minimo' );
 
 // Si no está activo woocommerce, lanzamos un aviso
-function mkp_aviso_falta_woocommerce() {
+function pedidominimo_aviso_falta_woocommerce() {
     ?>
     <div class="notice notice-error is-dismissible">
         <p>

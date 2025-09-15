@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
     exit; // Evitar acceso directo.
 }
 
-class Mkp_Pedido_Minimo_Public {
+class PedidoMinimo_Public {
     public function __construct()
     {
         add_action( 'woocommerce_check_cart_items' , array($this, 'woocommerce_importe_minimo') );
@@ -21,7 +21,7 @@ class Mkp_Pedido_Minimo_Public {
       * Establecer un importe minimo en la compra
       */
     public function woocommerce_importe_minimo() {
-        $minimum = get_option( 'mkp_precio_minimo', 0 );  // Valor de la página de opciones
+        $minimum = get_option( 'pedidominimo_precio_minimo', 0 );  // Valor de la página de opciones
         if ($minimum <= 0 || ! WC()->cart ) {
             return;
         }
