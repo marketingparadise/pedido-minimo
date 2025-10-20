@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Pedido mínimo for WooCommerce\n"
+"Project-Id-Version: Mínimum order for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-09 12:52+0000\n"
+"POT-Creation-Date: 2025-10-07 15:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,47 +13,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.8.0; wp-6.8.2; php-7.4.19\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-7.4.19\n"
 "X-Domain: pedido-minimo-for-woocommerce"
 
-#. 1: valor del precio mínimo que debe alcanzar el subtotal del carrito, 2: el subtotal actual del carrito.
-#: includes/class-pedido-minimo-public.php:30
-#, php-format
+#: pedido-minimo-for-woocommerce.php:30
+msgid "Activation error"
+msgstr ""
+
+#: includes/class-pedido-minimo-admin.php:102
 msgid ""
-"Debes realizar un <strong>pedido mínimo de %1$s</strong> para finalizar su "
-"compra. Ahora mismo el total de tu carrito es %2$s."
-msgstr ""
-
-#: pedido-minimo-for-woocommerce.php:29
-msgid "Error de activación"
-msgstr ""
-
-#. Description of the plugin
-msgid "Establece un pedido mínimo en tu tienda de woocommerce"
-msgstr ""
-
-#: includes/class-pedido-minimo-admin.php:28
-msgid "Establecer Pedido mínimo"
-msgstr ""
-
-#: pedido-minimo-for-woocommerce.php:70
-msgid ""
-"Este plugin requiere que WooCommerce esté instalado y activo para funcionar."
+"Check this box if you want the minimum order amount to be verified after "
+"applying the coupon discount."
 msgstr ""
 
 #. Author URI of the plugin
 msgid "https://mkparadise.com/"
-msgstr ""
-
-#. parte del ID del mensaje de error id="setting-error-no-float"
-#: includes/class-pedido-minimo-admin.php:93
-msgid "La cantidad no es válida"
-msgstr ""
-
-#: pedido-minimo-for-woocommerce.php:28
-msgid ""
-"Lo sentimos, pero el plugin \"Pedido Mínimo\" requiere que WooCommerce esté "
-"instalado y activo. Por favor, active WooCommerce y vuelva a intentarlo."
 msgstr ""
 
 #. Author of the plugin
@@ -61,13 +35,45 @@ msgid "Marketing Paradise"
 msgstr ""
 
 #: includes/class-pedido-minimo-admin.php:27
-msgid "Pedido mínimo"
+msgid "Minimum order"
+msgstr ""
+
+#: pedido-minimo-for-woocommerce.php:70
+msgid "Minimum order for WooCommerce:"
 msgstr ""
 
 #. Name of the plugin
-msgid "Pedido mínimo for WooCommerce"
+msgid "Mínimum order for WooCommerce"
 msgstr ""
 
-#: pedido-minimo-for-woocommerce.php:69
-msgid "Pedido Mínimo para WooCommerce:"
+#. Description of the plugin
+msgid "Set a minimum order amount in your WooCommerce shop."
+msgstr ""
+
+#: includes/class-pedido-minimo-admin.php:28
+msgid "Set minimum order"
+msgstr ""
+
+#. part of the error message ID id="setting-error-no-float"
+#: includes/class-pedido-minimo-admin.php:112
+msgid "The amount is invalid"
+msgstr ""
+
+#: pedido-minimo-for-woocommerce.php:71
+msgid ""
+"This plugin requires WooCommerce to be installed and active in order to work."
+msgstr ""
+
+#: pedido-minimo-for-woocommerce.php:29
+msgid ""
+"We are sorry, but the \"minimum order\" plugin requires WooCommerce to be "
+"installed and active. Please activate WooCommerce and try again."
+msgstr ""
+
+#. 1: minimum price value that the cart subtotal must reach, 2: the current cart subtotal.
+#: includes/class-pedido-minimo-public.php:37
+#, php-format
+msgid ""
+"You must place a <strong>minimum order of %1$s</strong> to complete your "
+"purchase. Your cart total is currently %2$s."
 msgstr ""

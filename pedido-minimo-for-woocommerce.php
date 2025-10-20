@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name: Pedido mínimo for WooCommerce
- * Description: Establece un pedido mínimo en tu tienda de woocommerce
- * Version: 1.0.3
+ * Plugin Name: Minimum order for WooCommerce
+ * Description: Set a minimum order amount in your WooCommerce shop.
+ * Version: 1.0.4
  * Requires Plugins: woocommerce
  * Author: Marketing Paradise
  * Author URI: https://mkparadise.com/
@@ -15,19 +15,19 @@
  */
 
 if (!defined('ABSPATH')) {
-    exit; // Evitar acceso directo.
+    exit;
 }
 
 
 /**
- * Al activar el plugin, comprobamos si woocommerce está activo
+ * When activating the plugin, we check whether WooCommerce is active.
  */
 function pedidominimo_activar_plugin_pedido_minimo() {
     if ( ! class_exists( 'WooCommerce' ) ) {
         deactivate_plugins( plugin_basename( __FILE__ ) );
         wp_die(
-            esc_html__( 'Lo sentimos, pero el plugin "Pedido Mínimo" requiere que WooCommerce esté instalado y activo. Por favor, active WooCommerce y vuelva a intentarlo.', 'pedido-minimo-for-woocommerce' ),
-            esc_html__( 'Error de activación', 'pedido-minimo-for-woocommerce' ),
+            esc_html__( 'We are sorry, but the "minimum order" plugin requires WooCommerce to be installed and active. Please activate WooCommerce and try again.', 'pedido-minimo-for-woocommerce' ),
+            esc_html__( 'Activation error', 'pedido-minimo-for-woocommerce' ),
             array( 'back_link' => true )
         );
     }
@@ -49,7 +49,7 @@ final class PedidoMinimo_Principal {
 }
 
 /**
- * Lanza mensaje si desactivamos woocommerce
+ * Display message if we deactivate WooCommerce
  */
 function pedidominimo_inicializar_plugin_pedido_minimo() {
     
@@ -62,13 +62,13 @@ function pedidominimo_inicializar_plugin_pedido_minimo() {
 }
 add_action( 'plugins_loaded', 'pedidominimo_inicializar_plugin_pedido_minimo' );
 
-// Si no está activo woocommerce, lanzamos un aviso
+// If WooCommerce is not active, we will launch a warning.
 function pedidominimo_aviso_falta_woocommerce() {
     ?>
     <div class="notice notice-error is-dismissible">
         <p>
-            <strong><?php esc_html_e( 'Pedido Mínimo para WooCommerce:', 'pedido-minimo-for-woocommerce' ); ?></strong>
-            <?php esc_html_e( 'Este plugin requiere que WooCommerce esté instalado y activo para funcionar.', 'pedido-minimo-for-woocommerce' ); ?>
+            <strong><?php esc_html_e( 'Minimum order for WooCommerce:', 'pedido-minimo-for-woocommerce' ); ?></strong>
+            <?php esc_html_e( 'This plugin requires WooCommerce to be installed and active in order to work.', 'pedido-minimo-for-woocommerce' ); ?>
         </p>
     </div>
     <?php

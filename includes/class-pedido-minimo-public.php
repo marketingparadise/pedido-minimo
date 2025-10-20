@@ -1,6 +1,6 @@
 <?php
 /**
- * La funcionalidad de frontend del plugin.
+ * The frontend functionality of the plugin.
  *
  * @package    Pedido_Minimo_Woocommerce
  * @subpackage Pedido_Minimo_Woocommerce/frontend
@@ -8,7 +8,7 @@
  */
 
 if (!defined('ABSPATH')) {
-    exit; // Evitar acceso directo.
+    exit;
 }
 
 class PedidoMinimo_Public {
@@ -18,16 +18,23 @@ class PedidoMinimo_Public {
     }
 
      /**
-      * Establecer un importe minimo en la compra
+      * Set a minimum purchase amount
       */
     public function woocommerce_importe_minimo() {
-        $minimum = get_option( 'pedidominimo_precio_minimo', 0 );  // Valor de la página de opciones
+        $minimum = get_option( 'pedidominimo_precio_minimo', 0 );  // Value of the options page
+        $incluir_descuentos = get_option( 'pedidominimo_incluir_descuentos', '0' ); // Value of the options page
+
         if ($minimum <= 0 || ! WC()->cart ) {
             return;
         }
-        if ( WC()->cart->subtotal < $minimum ) {
-            /* translators: 1: valor del precio mínimo que debe alcanzar el subtotal del carrito, 2: el subtotal actual del carrito. */
-            $mensaje = sprintf( __('Debes realizar un <strong>pedido mínimo de %1$s</strong> para finalizar su compra. Ahora mismo el total de tu carrito es %2$s.', 'pedido-minimo-for-woocommerce') ,
+        if ($incluir_descuentos) {
+            $subtotal_a_validar  = WC()->cart->get_cart_contents_total();
+        } else {
+            $subtotal_a_validar  = WC()->cart->get_subtotal();
+        }
+        if ( $subtotal_a_validar < $minimum ) {
+            /* translators: 1: minimum price value that the cart subtotal must reach, 2: the current cart subtotal. */
+            $mensaje = sprintf( __('You must place a <strong>minimum order of %1$s</strong> to complete your purchase. Your cart total is currently %2$s.', 'pedido-minimo-for-woocommerce') ,
             wc_price( $minimum ),
             wc_price( WC()->cart->subtotal )
             );

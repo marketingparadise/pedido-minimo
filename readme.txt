@@ -1,9 +1,9 @@
-=== Pedido mínimo for WooCommerce ===
+=== Minimum order for WooCommerce ===
 Contributors: marketingparadise
 Tags: woocommerce, minimum order, cart, checkout, e-commerce
 Requires at least: 5.8
-Tested up to: 6.9
-Stable tag: 1.0.3
+Tested up to: 6.8
+Stable tag: 1.0.4
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Set a minimum order amount in your WooCommerce store to be able to check out. Si
 
 == Description ==
 
-Do you want to ensure your customers reach a minimum amount before completing an order? **Pedido mínimo for WooCommerce** is the ideal tool for you.
+Do you want to ensure your customers reach a minimum amount before completing an order? **Minimum order for WooCommerce** is the ideal tool for you.
 
 This plugin allows you to set a minimum value that the cart subtotal must reach for the customer to proceed to checkout. If this requirement is not met, a clear notice will be displayed on the cart page, and the checkout process will be prevented.
 
@@ -28,14 +28,14 @@ This plugin allows you to set a minimum value that the cart subtotal must reach 
 **Automatic Installation (Recommended):**
 
 1.  From your WordPress dashboard, navigate to `Plugins > Add New`.
-2.  Search for "Minimum Order".
+2.  Search for "minimum order".
 3.  Click "Install Now" and then "Activate".
-4.  Go to `WooCommerce > Minimum Order` to set the minimum amount in the corresponding section.
+4.  Go to `WooCommerce > Minimum order` to set the minimum amount in the corresponding section.
 
 **Manual Installation:**
 
 1.  Download the plugin's `.zip` file from the WordPress.org repository.
-2.  Unzip the file. You will upload the `pedido-minimo-para-woocommerce` folder to the `/wp-content/plugins/` directory of your WordPress installation.
+2.  Unzip the file. You will upload the `minimum-order-para-woocommerce` folder to the `/wp-content/plugins/` directory of your WordPress installation.
 3.  Activate the plugin from the `Plugins` menu in your dashboard.
 4.  Configure the amount in `WooCommerce > Minimum Order`.
 
@@ -43,7 +43,7 @@ This plugin allows you to set a minimum value that the cart subtotal must reach 
 
 = Does the minimum amount include shipping costs? =
 
-No, the plugin validates the amount against the **cart subtotal**, before applying discount coupons or adding shipping costs.
+No, the plugin validates the amount against the **cart subtotal**. You have the option to do this before or after applying a coupon discount.
 
 = Can I customize the message shown to the user? =
 
@@ -64,6 +64,10 @@ No. The plugin is extremely lightweight, and its code only runs on the cart and 
 3.  Notice on the checkout page if the minimum is not met.
 
 == Changelog ==
+
+= 1.0.4 - 2025-10-07 =
+* New: Added option to take coupon discounts into account.
+* Fix: Corrected the English texts.
 
 = 1.0.3 - 2025-09-15 =
 * Tweak: Minor changes to class and function names.
