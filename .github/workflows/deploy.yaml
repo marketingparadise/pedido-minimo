@@ -22,7 +22,7 @@ jobs:
       # Esta es una acción mantenida por la comunidad (10up) muy fiable
       - name: WordPress Plugin Deploy
         id: deploy
-        uses: 10up/action-wordpress-plugin-deploy@stable
+        uses: 10up/action-wordpress-plugin-svn-deploy@stable
         with:
           # El "slug" de tu plugin en el repositorio de WP.org
           plugin_slug: "pedido-minimo-for-woocommerce"
